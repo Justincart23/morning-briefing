@@ -623,7 +623,7 @@ def rates_and_macro():
           <div style="font-size:11px;font-weight:800;color:#64748b;text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px">S&P 500</div>
           <div style="display:flex;gap:24px;flex-wrap:wrap">
             <div><div style="font-size:11px;color:#94a3b8">Yesterday Close (SPY)</div><div style="font-size:16px;font-weight:800;color:#0f172a">${spy_close:,.2f}</div></div>
-            <div><div style="font-size:11px;color:#94a3b8">Futures Implied Open (ES)</div><div style="font-size:16px;font-weight:800;color:{color}">{arrow} {implied_open_chg:+.2f}% &nbsp;<span style="font-size:13px;color:#475569">(${es_price:,.2f})</span></div></div>
+            <div><div style="font-size:11px;color:#94a3b8">Futures Implied Move (ES=F)</div><div style="font-size:16px;font-weight:800;color:{color}">{arrow} {implied_open_chg:+.2f}% &nbsp;<span style="font-size:13px;color:#475569">(${es_price:,.2f})</span></div></div>
           </div>
         </div>"""
     elif spy:
