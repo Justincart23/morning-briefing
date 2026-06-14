@@ -545,9 +545,8 @@ def analyst_lens():
 # ── SECTION 7: SPORTS & SMALL TALK ───────────────────────────────────────────
 def sports_brief():
     sport_feeds = [
-        ("🏀 NBA", "https://www.espn.com/espn/rss/nba/news"),
-        ("🏈 NFL", "https://www.espn.com/espn/rss/nfl/news"),
-        ("⚾ MLB", "https://www.espn.com/espn/rss/mlb/news"),
+        ("Top Sports", "https://feeds.bbci.co.uk/sport/rss.xml"),
+("US Sports",  "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml"),
     ]
 
     sport_html = ""
