@@ -194,6 +194,7 @@ def market_intelligence():
     tnx = get_quote("^TNX")
     oil = get_quote("CL=F")
     gold = get_quote("GC=F")
+  btc = get_quote("BTC-USD")
 
     # Market regime
     if es:
@@ -227,7 +228,9 @@ def market_intelligence():
         od = oil[2]
         if abs(od) > 1.5:
             chips.append((f"Oil {'Surging' if od > 0 else 'Falling'} {od:+.1f}%", "#92400e", "#fef3c7"))
-
+if btc:
+        bc = btc[2]
+        chips.append((f"BTC ${btc[0]:,.0f} {bc:+.1f}%", "#7c3aed" if bc >= 0 else "#6b21a8", "#f5f3ff"))
     chips_html = " ".join(
         f'<span style="display:inline-block;font-size:11px;font-weight:700;color:{c};background:{bg};padding:3px 9px;border-radius:4px">{t}</span>'
         for t, c, bg in chips
@@ -543,10 +546,11 @@ def analyst_lens():
 
 
 # ── SECTION 7: SPORTS & SMALL TALK ───────────────────────────────────────────
-def sports_brief():
-    sport_feeds = [
-        ("Top Sports", "https://feeds.bbci.co.uk/sport/rss.xml"),
-("US Sports",  "https://rss.nytimes.com/services/xml/rss/nyt/Sports.xml"),
+sport_feeds = [
+        ("⚾ MLB",  "https://www.mlb.com/feeds/news/rss.xml"),
+        ("🏀 NBA",  "https://www.nba.com/news/rss.xml"),
+        ("🏈 NFL",  "https://www.nfl.com/rss/rsslanding?searchString=news"),
+        ("🏒 NHL",  "https://www.nhl.com/rss/news.xml"),
     ]
 
     sport_html = ""
