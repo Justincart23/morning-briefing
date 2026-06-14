@@ -615,7 +615,7 @@ def rates_and_macro():
         spy_close = spy[0]
         es_price  = es[0]
         es_chg    = es[2]
-        implied_open_chg = ((es_price - spy_close) / spy_close) * 100
+        implied_open_chg = es_chg
         color = chg_color(implied_open_chg)
         arrow = chg_arrow(implied_open_chg)
         rows += f"""
