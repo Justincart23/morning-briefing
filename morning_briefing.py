@@ -194,8 +194,7 @@ def market_intelligence():
     tnx = get_quote("^TNX")
     oil = get_quote("CL=F")
     gold = get_quote("GC=F")
-  btc = get_quote("BTC-USD")
-
+    btc = get_quote("BTC-USD")
     # Market regime
     if es:
         chg = es[2]
